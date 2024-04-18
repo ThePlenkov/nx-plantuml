@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "namedInputs": {
+    "noop":["!{workspaceRoot}/**/*"],
+    "puml": [
+      "{workspaceRoot}/docs/**/*.puml"
+    ]
+  },
+  "targetDefaults": {
+    "puml": {
+      "cache": true ,
+      "inputs": [
+        "puml"
+      ]        
+    },
+    "build" :{
+      "cache": true,
+      "inputs": ["noop"],
+      "dependsOn": ["puml"]
+    }
+  }
+}
