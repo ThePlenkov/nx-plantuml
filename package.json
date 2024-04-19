@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Example of using nx and plantuml for automated image generations",
   "main": "index.js",
-  "scripts": {
-    "build":"echo 'Rebuilding the project'",
+  "scripts": {    
     "puml": "docker run -v $PWD/docs/puml:/data --rm plantuml/plantuml . -o img",
     "dev" : "nx watch --all -- npx nx build \\$NX_PROJECT_NAME"
   },
@@ -13,5 +12,7 @@
   "devDependencies": {
     "nx": "18.3.1"
   },
-  "nx": {}
+  "nx": {
+    "targets":{"build":{}}    
+  }
 }

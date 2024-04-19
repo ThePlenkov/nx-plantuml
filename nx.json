@@ -20,6 +20,7 @@
 
     },
     "build" :{
+      "executor": "nx:noop",
       "cache": true,
       "inputs": ["noop"],
       "dependsOn": ["puml"]
