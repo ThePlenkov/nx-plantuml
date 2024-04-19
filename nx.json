@@ -23,7 +23,8 @@
       "executor": "nx:noop",
       "cache": true,
       "inputs": ["noop"],
-      "dependsOn": ["puml"]
+      "dependsOn": ["puml"],
+      "outputs": []
     }
   }
 }
