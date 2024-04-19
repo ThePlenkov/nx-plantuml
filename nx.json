@@ -2,17 +2,22 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "defaultBase": "main",
   "namedInputs": {
-    "noop":["!{workspaceRoot}/**/*"],
+    "noop":["!{projectRoot}/**/*"],
     "puml": [
-      "{workspaceRoot}/docs/**/*.puml"
+      "{projectRoot}/docs/**/*.puml"
     ]
   },
   "targetDefaults": {
+    "default":{
+      "inputs": ["noop"]
+    },
     "puml": {
       "cache": true ,
       "inputs": [
         "puml"
-      ]        
+      ],
+      "outputs": ["{projectRoot}/docs/puml/img"]
+
     },
     "build" :{
       "cache": true,

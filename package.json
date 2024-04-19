@@ -6,7 +6,7 @@
   "scripts": {
     "build":"echo 'Rebuilding the project'",
     "puml": "docker run -v $PWD/docs/puml:/data --rm plantuml/plantuml . -o img",
-    "dev" : "nx watch --verbose --all -- npx nx build \\$NX_PROJECT_NAME"
+    "dev" : "nx watch --all -- npx nx build \\$NX_PROJECT_NAME"
   },
   "author": "",
   "license": "ISC",
